@@ -1,844 +1,1075 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcus Vinicius Brum da Costa | Líder em Engenharia de Software</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Marcus Vinicius Brum da Costa | Líder em Engenharia de Software
+    </title>
     <style>
-        /* Variáveis */
-        :root {
-            --main-color: #0077b6;
-            --secondary-color: #023e8a;
-            --text-color: #333;
-            --light-color: #f8f9fa;
-            --border-color: #dee2e6;
-        }
+      /* Variáveis */
+      :root {
+        --main-color: #0077b6;
+        --secondary-color: #023e8a;
+        --text-color: #333;
+        --light-color: #f8f9fa;
+        --border-color: #dee2e6;
+      }
 
-        /* Reset e estilos gerais */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      /* Reset e estilos gerais */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--light-color);
-        }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--light-color);
+      }
 
-        a {
-            text-decoration: none;
-            color: var(--main-color);
-            transition: color 0.3s;
-        }
+      a {
+        text-decoration: none;
+        color: var(--main-color);
+        transition: color 0.3s;
+      }
 
-        a:hover {
-            color: var(--secondary-color);
-        }
+      a:hover {
+        color: var(--secondary-color);
+      }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
 
-        .section {
-            padding: 60px 0;
-        }
+      .section {
+        padding: 60px 0;
+      }
 
-        .section-title {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            text-align: center;
-            color: var(--secondary-color);
-            position: relative;
-        }
+      .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        text-align: center;
+        color: var(--secondary-color);
+        position: relative;
+      }
 
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background-color: var(--main-color);
-            margin: 15px auto;
-        }
+      .section-title::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 3px;
+        background-color: var(--main-color);
+        margin: 15px auto;
+      }
 
-        /* Header */
-        header {
-            background-color: var(--main-color);
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-        }
+      /* Header */
+      header {
+        background-color: var(--main-color);
+        color: white;
+        padding: 30px 0;
+        text-align: center;
+      }
 
-        .profile-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
+      .profile-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
 
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 5px solid white;
-            margin-bottom: 20px;
-            object-fit: cover;
-            background-color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 50px;
-            color: var(--main-color);
-        }
+      .profile-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 5px solid white;
+        margin-bottom: 20px;
+        object-fit: cover;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+        color: var(--main-color);
+      }
 
-        .profile-name {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
+      .profile-name {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
 
-        .profile-title {
-            font-size: 1.2rem;
-            font-weight: normal;
-            margin-bottom: 20px;
-        }
+      .profile-title {
+        font-size: 1.2rem;
+        font-weight: normal;
+        margin-bottom: 20px;
+      }
 
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+      }
 
-        .social-links a {
-            color: white;
-            font-size: 1.5rem;
-        }
+      .social-links a {
+        color: white;
+        font-size: 1.5rem;
+      }
 
-        .social-links a:hover {
-            color: rgba(255, 255, 255, 0.8);
-        }
+      .social-links a:hover {
+        color: rgba(255, 255, 255, 0.8);
+      }
 
-        /* Navegação */
-        nav {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+      /* Navegação */
+      nav {
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
 
-        .nav-container {
-            display: flex;
-            justify-content: center;
-        }
+      .nav-container {
+        display: flex;
+        justify-content: center;
+      }
 
-        .nav-list {
-            display: flex;
-            list-style: none;
-        }
+      .nav-list {
+        display: flex;
+        list-style: none;
+      }
 
-        .nav-item {
-            padding: 15px 20px;
-        }
+      .nav-item {
+        padding: 15px 20px;
+      }
 
-        .nav-item a {
-            font-weight: 500;
-        }
+      .nav-item a {
+        font-weight: 500;
+      }
 
-        /* Sobre */
-        .about-content {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
+      /* Sobre */
+      .about-content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
 
-        .about-text {
-            text-align: justify;
-            font-size: 1.1rem;
-        }
+      .about-text {
+        text-align: justify;
+        font-size: 1.1rem;
+      }
 
-        /* Experiência */
-        .timeline {
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+      /* Experiência */
+      .timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
 
+      .timeline::after {
+        content: "";
+        position: absolute;
+        width: 3px;
+        background-color: var(--border-color);
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -1.5px;
+      }
+
+      .timeline-item {
+        padding: 10px 40px;
+        position: relative;
+        width: 50%;
+        box-sizing: border-box;
+      }
+
+      .timeline-item::after {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background-color: var(--main-color);
+        border-radius: 50%;
+        top: 22px;
+        z-index: 1;
+      }
+
+      .timeline-item-left {
+        left: 0;
+      }
+
+      .timeline-item-right {
+        left: 50%;
+      }
+
+      .timeline-item-left::after {
+        right: -7.5px;
+      }
+
+      .timeline-item-right::after {
+        left: -7.5px;
+      }
+
+      .timeline-content {
+        padding: 20px;
+        background-color: white;
+        border-radius: 6px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .timeline-date {
+        font-weight: bold;
+        color: var(--main-color);
+        margin-bottom: 5px;
+      }
+
+      .timeline-title {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+        color: var(--secondary-color);
+      }
+
+      .timeline-description {
+        margin-bottom: 15px;
+      }
+
+      .timeline-skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+
+      .skill-tag {
+        background-color: var(--light-color);
+        padding: 3px 8px;
+        border-radius: 15px;
+        font-size: 0.85rem;
+        color: var(--main-color);
+      }
+
+      /* Habilidades */
+      .skills-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 30px;
+      }
+
+      .skill-category {
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .skill-category h3 {
+        color: var(--main-color);
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--light-color);
+      }
+
+      .skill-list {
+        list-style: none;
+      }
+
+      .skill-list li {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      .skill-list li::before {
+        content: "•";
+        color: var(--main-color);
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+      }
+
+      /* Educação */
+      .education-list {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      .education-item {
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .education-date {
+        font-weight: bold;
+        color: var(--main-color);
+        margin-bottom: 5px;
+      }
+
+      .education-degree {
+        font-size: 1.25rem;
+        margin-bottom: 5px;
+        color: var(--secondary-color);
+      }
+
+      .education-institution {
+        margin-bottom: 10px;
+      }
+
+      .education-description {
+        font-style: italic;
+        color: #666;
+      }
+
+      /* Certificações */
+      .certifications-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+      }
+
+      .certification-item {
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .certification-title {
+        font-size: 1.1rem;
+        color: var(--secondary-color);
+        margin-bottom: 5px;
+      }
+
+      .certification-issuer {
+        color: #666;
+        margin-bottom: 10px;
+        font-style: italic;
+      }
+
+      .certification-date {
+        font-size: 0.9rem;
+        color: var(--main-color);
+      }
+
+      /* Contato */
+      .contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        font-family: inherit;
+      }
+
+      textarea.form-control {
+        min-height: 150px;
+        resize: vertical;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: var(--main-color);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+      }
+
+      .btn:hover {
+        background-color: var(--secondary-color);
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--secondary-color);
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 60px;
+      }
+
+      .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin: 20px 0;
+      }
+
+      .contact-info p {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .footer-links {
+        margin-top: 20px;
+      }
+
+      .footer-links a {
+        color: white;
+        margin: 0 10px;
+      }
+
+      /* Responsivo */
+      @media (max-width: 768px) {
         .timeline::after {
-            content: '';
-            position: absolute;
-            width: 3px;
-            background-color: var(--border-color);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -1.5px;
+          left: 31px;
         }
 
         .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            width: 50%;
-            box-sizing: border-box;
-        }
-
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 15px;
-            height: 15px;
-            background-color: var(--main-color);
-            border-radius: 50%;
-            top: 22px;
-            z-index: 1;
-        }
-
-        .timeline-item-left {
-            left: 0;
+          width: 100%;
+          padding-left: 70px;
+          padding-right: 25px;
         }
 
         .timeline-item-right {
-            left: 50%;
+          left: 0;
         }
 
-        .timeline-item-left::after {
-            right: -7.5px;
-        }
-
+        .timeline-item-left::after,
         .timeline-item-right::after {
-            left: -7.5px;
+          left: 23px;
         }
 
-        .timeline-content {
-            padding: 20px;
-            background-color: white;
-            border-radius: 6px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .timeline-date {
-            font-weight: bold;
-            color: var(--main-color);
-            margin-bottom: 5px;
-        }
-
-        .timeline-title {
-            font-size: 1.25rem;
-            margin-bottom: 10px;
-            color: var(--secondary-color);
-        }
-
-        .timeline-description {
-            margin-bottom: 15px;
-        }
-
-        .timeline-skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-        }
-
-        .skill-tag {
-            background-color: var(--light-color);
-            padding: 3px 8px;
-            border-radius: 15px;
-            font-size: 0.85rem;
-            color: var(--main-color);
-        }
-
-        /* Habilidades */
         .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 30px;
+          grid-template-columns: 1fr;
         }
 
-        .skill-category {
-            background-color: white;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .nav-list {
+          flex-wrap: wrap;
+          justify-content: center;
         }
 
-        .skill-category h3 {
-            color: var(--main-color);
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--light-color);
+        .nav-item {
+          padding: 10px 15px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .profile-name {
+          font-size: 1.8rem;
         }
 
-        .skill-list {
-            list-style: none;
+        .profile-title {
+          font-size: 1rem;
         }
 
-        .skill-list li {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
+        .section-title {
+          font-size: 1.5rem;
         }
 
-        .skill-list li::before {
-            content: "•";
-            color: var(--main-color);
-            font-weight: bold;
-            display: inline-block; 
-            width: 1em;
+        .timeline-item {
+          padding-left: 50px;
         }
 
-        /* Educação */
-        .education-list {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
+        .timeline::after {
+          left: 21px;
         }
 
-        .education-item {
-            background-color: white;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .timeline-item-left::after,
+        .timeline-item-right::after {
+          left: 13px;
         }
+      }
 
-        .education-date {
-            font-weight: bold;
-            color: var(--main-color);
-            margin-bottom: 5px;
-        }
+      .publications-grid {
+        display: grid;
+        grid-template-columns: repeat(
+          auto-fit,
+          minmax(300px, 1fr)
+        ); /* Layout responsivo */
+        gap: 20px;
+      }
 
-        .education-degree {
-            font-size: 1.25rem;
-            margin-bottom: 5px;
-            color: var(--secondary-color);
-        }
+      .publication-item {
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 5px;
+      }
 
-        .education-institution {
-            margin-bottom: 10px;
-        }
+      .publication-title {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+      }
 
-        .education-description {
-            font-style: italic;
-            color: #666;
-        }
+      .publication-date {
+        font-size: 0.9em;
+        color: #777;
+        margin-bottom: 10px;
+      }
 
-        /* Certificações */
-        .certifications-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
+      .publication-links a {
+        display: inline-block;
+        margin-right: 10px;
+        padding: 8px 12px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
 
-        .certification-item {
-            background-color: white;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+      .publication-links a:hover {
+        background-color: #0056b3;
+      }
 
-        .certification-title {
-            font-size: 1.1rem;
-            color: var(--secondary-color);
-            margin-bottom: 5px;
-        }
-
-        .certification-issuer {
-            color: #666;
-            margin-bottom: 10px;
-            font-style: italic;
-        }
-
-        .certification-date {
-            font-size: 0.9rem;
-            color: var(--main-color);
-        }
-
-        /* Contato */
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 500;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            font-family: inherit;
-        }
-
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--main-color);
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: var(--secondary-color);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--secondary-color);
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 60px;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin: 20px 0;
-        }
-
-        .contact-info p {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .footer-links {
-            margin-top: 20px;
-        }
-
-        .footer-links a {
-            color: white;
-            margin: 0 10px;
-        }
-
-        /* Responsivo */
-        @media (max-width: 768px) {
-            .timeline::after {
-                left: 31px;
-            }
-            
-            .timeline-item {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
-            }
-            
-            .timeline-item-right {
-                left: 0;
-            }
-            
-            .timeline-item-left::after, .timeline-item-right::after {
-                left: 23px;
-            }
-
-            .skills-container {
-                grid-template-columns: 1fr;
-            }
-
-            .nav-list {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .nav-item {
-                padding: 10px 15px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .profile-name {
-                font-size: 1.8rem;
-            }
-            
-            .profile-title {
-                font-size: 1rem;
-            }
-            
-            .section-title {
-                font-size: 1.5rem;
-            }
-            
-            .timeline-item {
-                padding-left: 50px;
-            }
-            
-            .timeline::after {
-                left: 21px;
-            }
-            
-            .timeline-item-left::after, .timeline-item-right::after {
-                left: 13px;
-            }
-        }
+      .publication-links i {
+        margin-right: 5px;
+      }
     </style>
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="profile-container">
-                <img src="images/profile.png" alt="Marcus Vinicius Brum da Costa" class="profile-image">
-                <h1 class="profile-name">Marcus Vinicius Brum da Costa</h1>
-                <h2 class="profile-title">Líder em Engenharia de Software e Gestão Ágil | Especialista em Transformação Digital e Inovação | Agile Coach e Mentor</h2>
-                <div class="social-links">
-                    <a href="mailto:marcusviniciusbrumcosta@gmail.com"><i class="fas fa-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/marcusvbcosta" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="tel:+5551993586022"><i class="fas fa-phone"></i></a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="profile-container">
+          <img
+            src="images/profile.png"
+            alt="Marcus Vinicius Brum da Costa"
+            class="profile-image"
+          />
+          <h1 class="profile-name">Marcus Vinicius Brum da Costa</h1>
+          <h2 class="profile-title">
+            Líder em Engenharia de Software e Gestão Ágil | Especialista em
+            Transformação Digital e Inovação | Agile Coach e Mentor
+          </h2>
+          <div class="social-links">
+            <a href="mailto:marcusviniciusbrumcosta@gmail.com"
+              ><i class="fas fa-envelope"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/marcusvbcosta" target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="tel:+5551993586022"><i class="fas fa-phone"></i></a>
+          </div>
         </div>
+      </div>
     </header>
 
     <!-- Navegação -->
     <nav>
-        <div class="container">
-            <div class="nav-container">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#about">Sobre</a></li>
-                    <li class="nav-item"><a href="#experience">Experiência</a></li>
-                    <li class="nav-item"><a href="#skills">Habilidades</a></li>
-                    <li class="nav-item"><a href="#education">Educação</a></li>
-                    <li class="nav-item"><a href="#certifications">Certificações</a></li>
-                    <li class="nav-item"><a href="#contact">Contato</a></li>
-                </ul>
-            </div>
+      <div class="container">
+        <div class="nav-container">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#about">Sobre</a></li>
+            <li class="nav-item"><a href="#experience">Experiência</a></li>
+            <li class="nav-item"><a href="#skills">Habilidades</a></li>
+            <li class="nav-item"><a href="#education">Educação</a></li>
+            <li class="nav-item">
+              <a href="#certifications">Certificações</a>
+            </li>
+            <li class="nav-item">
+                <a href="#publications">Publicações</a>
+              </li>
+            <li class="nav-item"><a href="#contact">Contato</a></li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- Sobre -->
     <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">Sobre Mim</h2>
-            <div class="about-content">
-                <p class="about-text">
-                    Profissional de TI com 16 anos de experiência, especializado em liderança de transformação ágil e melhoria contínua em equipes multifuncionais. Experiência diversificada em desenvolvimento de software, gestão de projetos ágeis e liderança técnica, com um histórico comprovado em otimizar processos e impulsionar resultados em áreas como TI, suporte, RH, comercial e Marketing.
-                </p>
-                <p class="about-text">
-                    Eficiente na aplicação de métricas ágeis para alcançar objetivos com foco em eficiência e colaboração. Comprometido com a melhoria contínua e o desenvolvimento de equipes, acredito no poder da união e no potencial humano para alcançar sucesso. Interessado em neurociência aplicada ao aprendizado e comportamentos.
-                </p>
-            </div>
+      <div class="container">
+        <h2 class="section-title">Sobre Mim</h2>
+        <div class="about-content">
+          <p class="about-text">
+            Profissional de TI com 16 anos de experiência, especializado em
+            liderança de transformação ágil e melhoria contínua em equipes
+            multifuncionais. Experiência diversificada em desenvolvimento de
+            software, gestão de projetos ágeis e liderança técnica, com um
+            histórico comprovado em otimizar processos e impulsionar resultados
+            em áreas como TI, suporte, RH, comercial e Marketing.
+          </p>
+          <p class="about-text">
+            Eficiente na aplicação de métricas ágeis para alcançar objetivos com
+            foco em eficiência e colaboração. Comprometido com a melhoria
+            contínua e o desenvolvimento de equipes, acredito no poder da união
+            e no potencial humano para alcançar sucesso. Interessado em
+            neurociência aplicada ao aprendizado e comportamentos.
+          </p>
         </div>
+      </div>
     </section>
 
     <!-- Experiência -->
-    <section id="experience" class="section" style="background-color: white;">
-        <div class="container">
-            <h2 class="section-title">Experiência Profissional</h2>
-            <div class="timeline">
-                <div class="timeline-item timeline-item-left">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Abr 2024 - Set 2024</div>
-                        <h3 class="timeline-title">Squad Leader Senior - WEBJUMP</h3>
-                        <p class="timeline-description">
-                            Gestão de projetos e times ágeis, liderança e desenvolvimento de equipe, análise de desempenho e resultados, negociação e relacionamento com stakeholders, facilitação de processos e melhoria contínua.
-                        </p>
-                        <div class="timeline-skills">
-                            <span class="skill-tag">Gestão Ágil</span>
-                            <span class="skill-tag">Scrum</span>
-                            <span class="skill-tag">Kanban</span>
-                            <span class="skill-tag">Liderança de Equipes</span>
-                            <span class="skill-tag">Facilitação</span>
-                            <span class="skill-tag">Gestão de Conflitos</span>
-                            <span class="skill-tag">Coaching</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item timeline-item-right">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Jan 2023 - Out 2023</div>
-                        <h3 class="timeline-title">Product Owner - AGGRANDIZE</h3>
-                        <p class="timeline-description">
-                            Definição e priorização de funcionalidades, facilitação de reuniões de discovery, processos de refinamento, comunicação e clareza do produto, remoção de impedimentos.
-                        </p>
-                        <div class="timeline-skills">
-                            <span class="skill-tag">Scrum</span>
-                            <span class="skill-tag">Facilitação</span>
-                            <span class="skill-tag">Liderança de Equipe</span>
-                            <span class="skill-tag">Comunicação Estratégica</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item timeline-item-left">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Abr 2022 - Out 2023</div>
-                        <h3 class="timeline-title">Agile Coach - AGGRANDIZE</h3>
-                        <p class="timeline-description">
-                            Mentoria de times, criação e aplicação de treinamentos, facilitação de cerimônias e reuniões, apoio na priorização e construção do backlog, definição de métricas.
-                        </p>
-                        <div class="timeline-skills">
-                            <span class="skill-tag">Agile</span>
-                            <span class="skill-tag">Scrum</span>
-                            <span class="skill-tag">Kanban</span>
-                            <span class="skill-tag">Coaching</span>
-                            <span class="skill-tag">Facilitação</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item timeline-item-right">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Jun 2017 - Mar 2022</div>
-                        <h3 class="timeline-title">Gerente de Projetos / Agile Coach - LCG IT</h3>
-                        <p class="timeline-description">
-                            Gestão de projetos com metodologias ágeis, liderança de equipe e desenvolvimento de talentos, alinhamento com clientes, transformação ágil, resultados de impacto.
-                        </p>
-                        <div class="timeline-skills">
-                            <span class="skill-tag">Gestão de Projetos</span>
-                            <span class="skill-tag">Gestão Ágil</span>
-                            <span class="skill-tag">Scrum</span>
-                            <span class="skill-tag">Kanban</span>
-                            <span class="skill-tag">Coaching</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item timeline-item-left">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Jun 2016 - Jun 2017</div>
-                        <h3 class="timeline-title">Líder técnico (Tech lead) / Scrum Master - LCG IT</h3>
-                        <p class="timeline-description">
-                            Implementação e liderança do framework Scrum, otimização de processos e redução de bugs, melhoria de performance em módulos do produto, agilidade na entrega de valor.
-                        </p>
-                        <div class="timeline-skills">
-                            <span class="skill-tag">Desenvolvimento de Software</span>
-                            <span class="skill-tag">Gestão Ágil</span>
-                            <span class="skill-tag">Scrum</span>
-                            <span class="skill-tag">Kanban</span>
-                            <span class="skill-tag">Liderança</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item timeline-item-right">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Dez 2015 - Jun 2016</div>
-                        <h3 class="timeline-title">Engenheiro de Software - LCG IT</h3>
-                        <p class="timeline-description">
-                            Desenvolvimento e sustentação, otimização de processamento, utilização de diversas tecnologias.
-                        </p>
-                        <div class="timeline-skills">
-                            <span class="skill-tag">PHP</span>
-                            <span class="skill-tag">Laravel</span>
-                            <span class="skill-tag">MySQL</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">Vue</span>
-                            <span class="skill-tag">Docker</span>
-                        </div>
-                    </div>
-                </div>
+    <section id="experience" class="section" style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Experiência Profissional</h2>
+        <div class="timeline">
+          <div class="timeline-item timeline-item-left">
+            <div class="timeline-content">
+              <div class="timeline-date">Abr 2024 - Set 2024</div>
+              <h3 class="timeline-title">Squad Leader Senior - WEBJUMP</h3>
+              <p class="timeline-description">
+                Gestão de projetos e times ágeis, liderança e desenvolvimento de
+                equipe, análise de desempenho e resultados, negociação e
+                relacionamento com stakeholders, facilitação de processos e
+                melhoria contínua.
+              </p>
+              <div class="timeline-skills">
+                <span class="skill-tag">Gestão Ágil</span>
+                <span class="skill-tag">Scrum</span>
+                <span class="skill-tag">Kanban</span>
+                <span class="skill-tag">Liderança de Equipes</span>
+                <span class="skill-tag">Facilitação</span>
+                <span class="skill-tag">Gestão de Conflitos</span>
+                <span class="skill-tag">Coaching</span>
+              </div>
             </div>
+          </div>
+          <div class="timeline-item timeline-item-right">
+            <div class="timeline-content">
+              <div class="timeline-date">Jan 2023 - Out 2023</div>
+              <h3 class="timeline-title">Product Owner - AGGRANDIZE</h3>
+              <p class="timeline-description">
+                Definição e priorização de funcionalidades, facilitação de
+                reuniões de discovery, processos de refinamento, comunicação e
+                clareza do produto, remoção de impedimentos.
+              </p>
+              <div class="timeline-skills">
+                <span class="skill-tag">Scrum</span>
+                <span class="skill-tag">Facilitação</span>
+                <span class="skill-tag">Liderança de Equipe</span>
+                <span class="skill-tag">Comunicação Estratégica</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item timeline-item-left">
+            <div class="timeline-content">
+              <div class="timeline-date">Abr 2022 - Out 2023</div>
+              <h3 class="timeline-title">Agile Coach - AGGRANDIZE</h3>
+              <p class="timeline-description">
+                Mentoria de times, criação e aplicação de treinamentos,
+                facilitação de cerimônias e reuniões, apoio na priorização e
+                construção do backlog, definição de métricas.
+              </p>
+              <div class="timeline-skills">
+                <span class="skill-tag">Agile</span>
+                <span class="skill-tag">Scrum</span>
+                <span class="skill-tag">Kanban</span>
+                <span class="skill-tag">Coaching</span>
+                <span class="skill-tag">Facilitação</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item timeline-item-right">
+            <div class="timeline-content">
+              <div class="timeline-date">Jun 2017 - Mar 2022</div>
+              <h3 class="timeline-title">
+                Gerente de Projetos / Agile Coach - LCG IT
+              </h3>
+              <p class="timeline-description">
+                Gestão de projetos com metodologias ágeis, liderança de equipe e
+                desenvolvimento de talentos, alinhamento com clientes,
+                transformação ágil, resultados de impacto.
+              </p>
+              <div class="timeline-skills">
+                <span class="skill-tag">Gestão de Projetos</span>
+                <span class="skill-tag">Gestão Ágil</span>
+                <span class="skill-tag">Scrum</span>
+                <span class="skill-tag">Kanban</span>
+                <span class="skill-tag">Coaching</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item timeline-item-left">
+            <div class="timeline-content">
+              <div class="timeline-date">Jun 2016 - Jun 2017</div>
+              <h3 class="timeline-title">
+                Líder técnico (Tech lead) / Scrum Master - LCG IT
+              </h3>
+              <p class="timeline-description">
+                Implementação e liderança do framework Scrum, otimização de
+                processos e redução de bugs, melhoria de performance em módulos
+                do produto, agilidade na entrega de valor.
+              </p>
+              <div class="timeline-skills">
+                <span class="skill-tag">Desenvolvimento de Software</span>
+                <span class="skill-tag">Gestão Ágil</span>
+                <span class="skill-tag">Scrum</span>
+                <span class="skill-tag">Kanban</span>
+                <span class="skill-tag">Liderança</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item timeline-item-right">
+            <div class="timeline-content">
+              <div class="timeline-date">Dez 2015 - Jun 2016</div>
+              <h3 class="timeline-title">Engenheiro de Software - LCG IT</h3>
+              <p class="timeline-description">
+                Desenvolvimento e sustentação, otimização de processamento,
+                utilização de diversas tecnologias.
+              </p>
+              <div class="timeline-skills">
+                <span class="skill-tag">PHP</span>
+                <span class="skill-tag">Laravel</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Vue</span>
+                <span class="skill-tag">Docker</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Habilidades -->
     <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title">Habilidades</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Gestão Ágil</h3>
-                    <ul class="skill-list">
-                        <li>Scrum</li>
-                        <li>Kanban</li>
-                        <li>Lean</li>
-                        <li>OKRs</li>
-                        <li>Gestão de Backlog</li>
-                        <li>Métricas Ágeis</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Liderança</h3>
-                    <ul class="skill-list">
-                        <li>Gestão de Equipes</li>
-                        <li>Desenvolvimento de Talentos</li>
-                        <li>Facilitação</li>
-                        <li>Coaching</li>
-                        <li>Gestão de Conflitos</li>
-                        <li>Comunicação Estratégica</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Desenvolvimento</h3>
-                    <ul class="skill-list">
-                        <li>PHP (Laravel, Codeigniter)</li>
-                        <li>JavaScript/TypeScript</li>
-                        <li>Node.js</li>
-                        <li>Vue.js, Angular</li>
-                        <li>HTML, CSS</li>
-                        <li>Docker</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Bancos de Dados</h3>
-                    <ul class="skill-list">
-                        <li>MySQL</li>
-                        <li>PostgreSQL</li>
-                        <li>AWS</li>
-                    </ul>
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="section-title">Habilidades</h2>
+        <div class="skills-container">
+          <div class="skill-category">
+            <h3>Gestão Ágil</h3>
+            <ul class="skill-list">
+              <li>Scrum</li>
+              <li>Kanban</li>
+              <li>Lean</li>
+              <li>OKRs</li>
+              <li>Gestão de Backlog</li>
+              <li>Métricas Ágeis</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Liderança</h3>
+            <ul class="skill-list">
+              <li>Gestão de Equipes</li>
+              <li>Desenvolvimento de Talentos</li>
+              <li>Facilitação</li>
+              <li>Coaching</li>
+              <li>Gestão de Conflitos</li>
+              <li>Comunicação Estratégica</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Desenvolvimento</h3>
+            <ul class="skill-list">
+              <li>PHP (Laravel, Codeigniter)</li>
+              <li>JavaScript/TypeScript</li>
+              <li>Node.js</li>
+              <li>Vue.js, Angular</li>
+              <li>HTML, CSS</li>
+              <li>Docker</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Bancos de Dados</h3>
+            <ul class="skill-list">
+              <li>MySQL</li>
+              <li>PostgreSQL</li>
+              <li>AWS</li>
+            </ul>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Educação -->
-    <section id="education" class="section" style="background-color: white;">
-        <div class="container">
-            <h2 class="section-title">Formação Acadêmica</h2>
-            <div class="education-list">
-                <div class="education-item">
-                    <div class="education-date">2014 - 2015</div>
-                    <h3 class="education-degree">Sistemas de Informação</h3>
-                    <div class="education-institution">Universidade do Vale do Rio dos Sinos</div>
-                </div>
-                <div class="education-item">
-                    <div class="education-date">2012 - 2014</div>
-                    <h3 class="education-degree">Sistemas de Informação</h3>
-                    <div class="education-institution">Uniritter</div>
-                    <p class="education-description">Durante a faculdade, fundei um grupo de estudos sobre IoT (Internet of Things) e, como resultado, fui convidado por um professor para ministrar palestras sobre Arduino para os alunos dos cursos de tecnologia.</p>
-                </div>
-                <div class="education-item">
-                    <div class="education-date">2007 - 2009</div>
-                    <h3 class="education-degree">Técnico em Informática</h3>
-                    <div class="education-institution">Objetus Informática</div>
-                </div>
+    <section id="education" class="section" style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Formação Acadêmica</h2>
+        <div class="education-list">
+          <div class="education-item">
+            <div class="education-date">2014 - 2015</div>
+            <h3 class="education-degree">Sistemas de Informação</h3>
+            <div class="education-institution">
+              Universidade do Vale do Rio dos Sinos
             </div>
+          </div>
+          <div class="education-item">
+            <div class="education-date">2012 - 2014</div>
+            <h3 class="education-degree">Sistemas de Informação</h3>
+            <div class="education-institution">Uniritter</div>
+            <p class="education-description">
+              Durante a faculdade, fundei um grupo de estudos sobre IoT
+              (Internet of Things) e, como resultado, fui convidado por um
+              professor para ministrar palestras sobre Arduino para os alunos
+              dos cursos de tecnologia.
+            </p>
+          </div>
+          <div class="education-item">
+            <div class="education-date">2007 - 2009</div>
+            <h3 class="education-degree">Técnico em Informática</h3>
+            <div class="education-institution">Objetus Informática</div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Certificações -->
     <section id="certifications" class="section">
-        <div class="container">
-            <h2 class="section-title">Certificações</h2>
-            <div class="certifications-grid">
-                <div class="certification-item">
-                    <h3 class="certification-title">Cybersecurity Essentials</h3>
-                    <div class="certification-issuer">The Linux Foundation</div>
-                    <div class="certification-date">Janeiro 2024</div>
-                </div>
-                <div class="certification-item">
-                    <h3 class="certification-title">Métricas de negócios digitais</h3>
-                    <div class="certification-issuer">PM3</div>
-                    <div class="certification-date">Janeiro 2024</div>
-                </div>
-                <div class="certification-item">
-                    <h3 class="certification-title">Enterprise Agile Coach Certified</h3>
-                    <div class="certification-issuer">AIB Institute</div>
-                    <div class="certification-date">Agosto 2023</div>
-                </div>
-                <div class="certification-item">
-                    <h3 class="certification-title">Accredited in OKR Management</h3>
-                    <div class="certification-issuer">AIB Institute</div>
-                    <div class="certification-date">Junho 2023</div>
-                </div>
-                <div class="certification-item">
-                    <h3 class="certification-title">Customer Experience Professional</h3>
-                    <div class="certification-issuer">Kanban University</div>
-                    <div class="certification-date">Maio 2022</div>
-                </div>
-                <div class="certification-item">
-                    <h3 class="certification-title">Kanban System Design (KSD / KMP1)</h3>
-                    <div class="certification-issuer">Kanban University</div>
-                    <div class="certification-date">Março 2022</div>
-                </div>
-                <div class="certification-item">
-                    <h3 class="certification-title">Certified Lean Inception Facilitator</h3>
-                    <div class="certification-issuer">Caroli.org</div>
-                    <div class="certification-date">Novembro 2018</div>
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="section-title">Certificações</h2>
+        <div class="certifications-grid">
+          <div class="certification-item">
+            <h3 class="certification-title">Cybersecurity Essentials</h3>
+            <div class="certification-issuer">The Linux Foundation</div>
+            <div class="certification-date">Janeiro 2024</div>
+          </div>
+          <div class="certification-item">
+            <h3 class="certification-title">Métricas de negócios digitais</h3>
+            <div class="certification-issuer">PM3</div>
+            <div class="certification-date">Janeiro 2024</div>
+          </div>
+          <div class="certification-item">
+            <h3 class="certification-title">
+              Enterprise Agile Coach Certified
+            </h3>
+            <div class="certification-issuer">AIB Institute</div>
+            <div class="certification-date">Agosto 2023</div>
+          </div>
+          <div class="certification-item">
+            <h3 class="certification-title">Accredited in OKR Management</h3>
+            <div class="certification-issuer">AIB Institute</div>
+            <div class="certification-date">Junho 2023</div>
+          </div>
+          <div class="certification-item">
+            <h3 class="certification-title">
+              Customer Experience Professional
+            </h3>
+            <div class="certification-issuer">Kanban University</div>
+            <div class="certification-date">Maio 2022</div>
+          </div>
+          <div class="certification-item">
+            <h3 class="certification-title">
+              Kanban System Design (KSD / KMP1)
+            </h3>
+            <div class="certification-issuer">Kanban University</div>
+            <div class="certification-date">Março 2022</div>
+          </div>
+          <div class="certification-item">
+            <h3 class="certification-title">
+              Certified Lean Inception Facilitator
+            </h3>
+            <div class="certification-issuer">Caroli.org</div>
+            <div class="certification-date">Novembro 2018</div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Publicações -->
+    <section
+      id="publications"
+      class="section"
+      style="background-color: white"
+    >
+      <div class="container">
+        <h2 class="section-title">Publicações</h2>
+        <div class="publications-grid">
+          <div class="publication-item">
+            <h3 class="publication-title">Primeiros Passos com Arduino</h3>
+            <p class="publication-date">2011</p>
+            <div class="publication-links">
+              <a
+                href="https://pt.slideshare.net/slideshow/arduino-8002513/8002513"
+                target="_blank"
+                class="publication-link"
+              >
+                <i class="fas fa-external-link-alt"></i> Acessar Slides
+              </a>
+            </div>
+          </div>
+
+          <div class="publication-item">
+            <h3 class="publication-title">OKRs</h3>
+            <p class="publication-date">2020</p>
+            <div class="publication-links">
+              <a
+                href="https://pt.slideshare.net/MarcusViniciusBrumda/okrs-238968629"
+                target="_blank"
+                class="publication-link"
+              >
+                <i class="fas fa-external-link-alt"></i> Acessar Slides
+              </a>
+            </div>
+          </div>
+
+          <div class="publication-item">
+            <h3 class="publication-title">Tcheduino</h3>
+            <p class="publication-date">2011</p>
+            <div class="publication-links">
+              <a
+                href="https://tcheduino.blogspot.com/"
+                target="_blank"
+                class="publication-link"
+              >
+                <i class="fas fa-external-link-alt"></i> Acessar Site
+              </a>
+            </div>
+          </div>
+
+          <div class="publication-item">
+            <h3 class="publication-title">A Trivialidade da Excelência</h3>
+            <p class="publication-date">2023</p>
+            <div class="publication-links">
+              <a
+                href="https://www.linkedin.com/pulse/trivialidade-da-excel%C3%AAncia-marcus-costa"
+                target="_blank"
+                class="publication-link"
+              >
+                <i class="fas fa-external-link-alt"></i> Acessar Artigo
+              </a>
+            </div>
+          </div>
+
+          <div class="publication-item">
+            <h3 class="publication-title">Golden Circle: Por que fazemos o que fazemos?</h3>
+            <p class="publication-date">2020</p>
+            <div class="publication-links">
+              <a
+                href="https://www.linkedin.com/pulse/golden-circle-por-que-fazemos-o-marcus-costa"
+                target="_blank"
+                class="publication-link"
+              >
+                <i class="fas fa-external-link-alt"></i> Acessar Artigo
+              </a>
+            </div>
+          </div>
+
+          <div class="publication-item">
+            <h3 class="publication-title">
+                A Chave do Aprendizado
+            </h3>
+            <p class="publication-date">2025</p>
+            <div class="publication-links">
+              <a
+                href="/assets/pdf/Chave do Aprendizado.pdf"
+                target="_blank"
+                class="publication-link"
+                download
+              >
+                <i class="fas fa-file-pdf"></i> Baixar Ebook
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contato -->
-    <section id="contact" class="section" style="background-color: white;">
-        <div class="container">
-            <h2 class="section-title">Entre em Contato</h2>
-            <form class="contact-form" action="#" method="POST">
-                <div class="form-group">
-                    <label for="name">Nome</label>
-                    <input type="text" id="name" name="name" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Assunto</label>
-                    <input type="text" id="subject" name="subject" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Mensagem</label>
-                    <textarea id="message" name="message" class="form-control" required></textarea>
-                </div>
-                <button type="submit" class="btn">Enviar Mensagem</button>
-            </form>
-        </div>
+    <section id="contact" class="section" style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Entre em Contato</h2>
+        <form class="contact-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="subject">Assunto</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea
+              id="message"
+              name="message"
+              class="form-control"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn">Enviar Mensagem</button>
+        </form>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <h3>Marcus Vinicius Brum da Costa</h3>
-            <p>Líder em Engenharia de Software e Gestão Ágil</p>
-            <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> marcusviniciusbrumcosta@gmail.com</p>
-                <p><i class="fas fa-phone"></i> (51) 99358-6022</p>
-                <p><i class="fab fa-linkedin"></i> /marcusvbcosta</p>
-            </div>
-            <div class="footer-links">
-                <a href="#about">Sobre</a>
-                <a href="#experience">Experiência</a>
-                <a href="#skills">Habilidades</a>
-                <a href="#education">Educação</a>
-                <a href="#certifications">Certificações</a>
-            </div>
-            <p>&copy; 2024 Marcus Vinicius Brum da Costa. Todos os direitos reservados.</p>
+      <div class="container">
+        <h3>Marcus Vinicius Brum da Costa</h3>
+        <p>Líder em Engenharia de Software e Gestão Ágil</p>
+        <div class="contact-info">
+          <p>
+            <i class="fas fa-envelope"></i> marcusviniciusbrumcosta@gmail.com
+          </p>
+          <p><i class="fas fa-phone"></i> (51) 99358-6022</p>
+          <p><i class="fab fa-linkedin"></i> /marcusvbcosta</p>
         </div>
+        <div class="footer-links">
+          <a href="#about">Sobre</a>
+          <a href="#experience">Experiência</a>
+          <a href="#skills">Habilidades</a>
+          <a href="#education">Educação</a>
+          <a href="#certifications">Certificações</a>
+        </div>
+        <p>
+          &copy; 2024 Marcus Vinicius Brum da Costa. Todos os direitos
+          reservados.
+        </p>
+      </div>
     </footer>
 
     <!-- Scripts -->
     <script>
-        // Para substituir o kit FontAwesome (se você não tiver um)
-        document.addEventListener('DOMContentLoaded', function() {
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
-            document.head.appendChild(link);
-        });
+      // Para substituir o kit FontAwesome (se você não tiver um)
+      document.addEventListener("DOMContentLoaded", function () {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href =
+          "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css";
+        document.head.appendChild(link);
+      });
 
-        // Navegação suave
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+      // Navegação suave
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
         });
+      });
     </script>
-</body>
+  </body>
 </html>
