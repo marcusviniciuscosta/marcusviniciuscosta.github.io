@@ -35,6 +35,45 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+  const menuToggle = document.getElementById("menu-toggle");
+  const navList = document.getElementById("nav-list");
+
+  if (menuToggle && navList) {
+    menuToggle.addEventListener("click", function () {
+      navList.classList.toggle("active");
+    });
+
+    // Feche o menu ao clicar em um link
+    const navLinks = document.querySelectorAll(".nav-item a");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function () {
+        if (window.innerWidth <= 768) {
+          navList.classList.remove("active");
+        }
+      });
+    });
+
+    // Feche o menu ao redimensionar para desktop
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 768) {
+        navList.classList.remove("active");
+      }
+    });
+  }
+
+  const backToTopButton = document.getElementById("back-to-top");
+
+  if (backToTopButton) {
+    // Função de rolagem suave ao clicar no botão
+    backToTopButton.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
 });
 
 // Navegação suave

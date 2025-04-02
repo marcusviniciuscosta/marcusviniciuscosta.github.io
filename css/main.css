@@ -1,3 +1,7 @@
+html {
+  scroll-padding-top: 70px;
+}
+
 /* Variáveis */
 :root {
   --main-color: #0077b6;
@@ -133,14 +137,96 @@ nav {
 .nav-list {
   display: flex;
   list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-item {
-  padding: 15px 20px;
+  padding: 15px 15px;
 }
 
 .nav-item a {
   font-weight: 500;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+  color: #007bff;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 15px;
+}
+
+/* Media queries para responsividade */
+@media screen and (max-width: 960px) {
+  html {
+    scroll-padding-top: 35px;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+  }
+
+  .nav-item {
+    padding: 12px 10px;
+  }
+
+  .nav-item a {
+    font-size: 0.9rem;
+  }
+
+  .nav-item:last-child a {
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-container {
+    justify-content: flex-start;
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block;
+    z-index: 1001;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .nav-item {
+    padding: 12px 24px;
+    border-bottom: 1px solid #f1f1f1;
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav-item:last-child {
+    border-bottom: none;
+  }
 }
 
 /* Sobre */
@@ -318,35 +404,47 @@ nav {
   color: #666;
 }
 
-/* Certificações */
-.certifications-grid {
+/* Cards */
+.cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 }
 
-.certification-item {
+.card {
+  text-align: center;
   background-color: white;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.certification-title {
+.card-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--main-color);
+  margin-bottom: 15px;
+}
+
+.card-title-small {
   font-size: 1.1rem;
-  color: var(--secondary-color);
+  color: var(--main-color);
   margin-bottom: 5px;
 }
 
-.certification-issuer {
+.card-issuer {
   color: #666;
   margin-bottom: 10px;
   font-style: italic;
 }
 
-.certification-date {
+.card-date {
   font-size: 0.9rem;
-  color: var(--main-color);
+  color: #666;
+  margin-bottom: 15px;
 }
 
 /* Contato */
@@ -404,7 +502,7 @@ footer {
   color: white;
   text-align: center;
   padding: 20px 0;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .contact-info {
@@ -518,14 +616,18 @@ footer {
   margin-bottom: 10px;
 }
 
+.publication-links {
+  margin-top: auto;
+}
+
 .publication-links a {
   display: inline-block;
-  margin-right: 10px;
   padding: 8px 12px;
   background-color: #007bff;
   color: white;
   text-decoration: none;
   border-radius: 5px;
+  margin-top: 25px;
 }
 
 .publication-links a:hover {
@@ -534,4 +636,72 @@ footer {
 
 .publication-links i {
   margin-right: 5px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.testimonial-author img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.testimonial-author h4 {
+  margin: 0;
+  color: var(--secondary-color);
+}
+
+.cta-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px auto;
+  max-width: 1000px;
+}
+
+.cta-button {
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-align: center;
+  transition: var(--transition-default);
+  min-width: 200px;
+}
+
+.cta-button.primary {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.cta-button.secondary {
+  background-color: white;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+}
+
+.cta-button.tertiary {
+  background-color: var(--light-color);
+  color: var(--text-color);
+}
+
+.education-item ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.education-item ul ul {
+  list-style-type: circle;
+  padding-left: 20px;
+}
+
+.privacy-note {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-top: 15px;
 }

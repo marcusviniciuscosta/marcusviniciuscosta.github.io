@@ -8,12 +8,26 @@
       name="description"
       content="Marcus Vinicius Brum da Costa - Líder em Engenharia de Software e Gestão Ágil com 16 anos de experiência. Top Voice LinkedIn em Liderança. Especialista em transformação ágil, otimização de processos e desenvolvimento de equipes."
     />
+    <meta
+      property="og:title"
+      content="Marcus Vinicius Brum da Costa | Líder em Engenharia de Software"
+    />
+    <meta
+      property="og:description"
+      content="Líder em Engenharia de Software e Gestão Ágil com 16 anos de experiência. Top Voice LinkedIn em Liderança."
+    />
+    <meta property="og:image" content="images/profile.jpeg" />
+    <meta property="og:url" content="https://marcusviniciuscosta.github.io/" />
+
     <title>
       Marcus Vinicius Brum da Costa | Líder em Engenharia de Software
     </title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
   </head>
   <body>
     <!-- Header -->
@@ -52,22 +66,28 @@
     <nav>
       <div class="container">
         <div class="nav-container">
-          <ul class="nav-list">
+          <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+          <ul class="nav-list" id="nav-list">
             <li class="nav-item"><a href="#about">Sobre</a></li>
+            <li class="nav-item"><a href="#achievements">Resultados</a></li>
             <li class="nav-item"><a href="#experience">Experiência</a></li>
+            <li class="nav-item"><a href="#case-study">Estudo de Caso</a></li>
             <li class="nav-item"><a href="#skills">Habilidades</a></li>
-            <li class="nav-item"><a href="#education">Educação</a></li>
+            <li class="nav-item"><a href="#education">Formação</a></li>
+            <li class="nav-item"><a href="#recognition">Reconhecimento</a></li>
             <li class="nav-item">
               <a href="#certifications">Certificações</a>
             </li>
             <li class="nav-item">
               <a href="#publications">Publicações</a>
             </li>
+            <li class="nav-item"><a href="#workshops">Palestras</a></li>
+            <li class="nav-item"><a href="#testimonials">Depoimentos</a></li>
             <li class="nav-item"><a href="#contact">Contato</a></li>
             <li class="nav-item">
-              <a href="/assets/pdf/Marcus Costa - Curriculo.pdf" download
-                >Download Currículo</a
-              >
+              <a href="/assets/pdf/Marcus Costa - Curriculo.pdf" download>CV</a>
             </li>
           </ul>
         </div>
@@ -77,29 +97,84 @@
     <!-- Sobre -->
     <section id="about" class="section">
       <div class="container">
-        <h2 class="section-title">Sobre Mim</h2>
+        <h2 class="section-title">Sobre</h2>
         <div class="about-content">
           <p class="about-text">
-            Profissional de TI com 16 anos de experiência, especializado em
-            liderança de transformação ágil e melhoria contínua em equipes
-            multifuncionais. Experiência diversificada em desenvolvimento de
-            software, gestão de projetos ágeis e liderança técnica, com um
-            histórico comprovado em otimizar processos e impulsionar resultados
-            em áreas como TI, suporte, RH, comercial e Marketing.
+            Daquele garoto que desmontava tudo para "consertar" (e nem sempre
+            conseguia montar de volta) nasceu um profissional obcecado por
+            entender como as coisas funcionam. A tecnologia me fisgou quando meu
+            tio me apresentou ao
+            <a href="https://pt.wikipedia.org/wiki/DOS" target="_blank">DOS</a>,
+            e aquelas linhas de comando me pareceram mágicas. Desde então, minha
+            vida se tornou uma busca constante pelo próximo desafio técnico.
           </p>
           <p class="about-text">
-            Eficiente na aplicação de métricas ágeis para alcançar objetivos com
-            foco em eficiência e colaboração. Comprometido com a melhoria
-            contínua e o desenvolvimento de equipes, acredito no poder da união
-            e no potencial humano para alcançar sucesso. Interessado em
-            neurociência aplicada ao aprendizado e comportamentos.
+            Ao longo de mais de 16 anos na área, passei de desenvolvedor a
+            líder, descobrindo que meu real talento não estava apenas em
+            resolver problemas complexos de código, mas em conectar pessoas e
+            potencializar times. Essa jornada me levou a conquistas
+            significativas, como por exemplo reduzir chamados de bugs e diminuir
+            ciclos de entrega de valor para os clientes.
+          </p>
+          <p class="about-text">
+            Acredito que além de líder eu seja um construtor de pontes. Entre
+            áreas que não se comunicavam, entre processos que pareciam
+            incompatíveis, entre pessoas com visões diferentes. Quando assumi
+            projetos estagnados, não apenas implementei processos e metodologias
+            ágeis, mas mergulhei fundo nos "porquês" dos times, desvendando
+            bloqueios, gargalos e encontrando caminhos onde outros viam apenas
+            muros.
+          </p>
+          <p class="about-text">
+            Hoje, compartilho essas experiências e aprendizados com a
+            comunidade. Se você busca alguém que enxergue além do óbvio e
+            transforme desafios em resultados concretos, vamos conversar.
+            Afinal, a verdadeira revolução acontece quando unimos pessoas,
+            propósito e tecnologia em busca de um objetivo comum.
           </p>
         </div>
       </div>
     </section>
 
+    <!-- Resultados -->
+    <section id="achievements" class="section" style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Alguns Resultados</h2>
+        <div class="cards-grid">
+          <div class="card">
+            <h3 class="card-title">40%</h3>
+            <p>
+              Redução em chamados de bugs através da implementação de gestão
+              efetiva de fluxo e coaching técnico
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">80%</h3>
+            <p>
+              Otimização de performance em sistemas críticos através de
+              refatoração estratégica
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">50%</h3>
+            <p>
+              Redução no ciclo de entrega de valor (de 1 mês para 2 semanas) em
+              projetos críticos
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">60%</h3>
+            <p>
+              Aumento na produtividade em times através da implementação de
+              práticas de gestão ágil e otimização do fluxo de trabalho.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Experiência -->
-    <section id="experience" class="section" style="background-color: white">
+    <section id="experience" class="section">
       <div class="container">
         <h2 class="section-title">Experiência Profissional</h2>
         <div class="timeline">
@@ -221,6 +296,151 @@
       </div>
     </section>
 
+    <!-- Estudo de Caso -->
+    <section id="case-study" class="section" style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Estudo de Caso: Transformação Ágil</h2>
+        <div class="education-list">
+          <div class="education-item">
+            <h3 class="education-degree">Desafio:</h3>
+            <p>
+              A empresa enfrentava desafios significativos que comprometiam sua
+              eficiência e crescimento:
+            </p>
+            <ul>
+              <li>Departamentos operando em silos, com comunicação limitada</li>
+              <li>
+                Ciclos de entrega longos (média de 1 mês), prejudicando a
+                adaptação às demandas do mercado
+              </li>
+              <li>
+                Acúmulo crítico de bugs em produtos existentes, impactando a
+                satisfação dos clientes
+              </li>
+              <li>
+                Cultura de trabalho reativa com pouco foco em melhoria contínua
+              </li>
+            </ul>
+          </div>
+          <div class="education-item">
+            <h3 class="education-degree">Abordagem:</h3>
+            <p>
+              Liderando a iniciativa de transformação, implementei uma
+              estratégia abrangente:
+            </p>
+            <ul>
+              <li>
+                <strong>Diagnóstico e Planejamento:</strong>
+                <ul>
+                  <li>
+                    Mapeamento detalhado dos processos existentes e
+                    identificação dos gargalos
+                  </li>
+                  <li>
+                    Workshops para alinhamento de expectativas com liderança e
+                    colaboradores
+                  </li>
+                  <li>
+                    Definição de métricas claras para acompanhamento do
+                    progresso
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <strong>Implementação Ágil Adaptada:</strong>
+                <ul>
+                  <li>
+                    Framework Scrum customizado para as necessidades específicas
+                    de cada time
+                  </li>
+                  <li>
+                    Kanban para visualização do fluxo de trabalho e
+                    identificação de impedimentos
+                  </li>
+                  <li>
+                    Rituais estratégicos de refinamento e retrospectivas focados
+                    em melhoria contínua
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <strong>Desenvolvimento de Pessoas:</strong>
+              </li>
+              <ul>
+                <li>
+                  Programa de capacitação em metodologias ágeis para todos os
+                  níveis
+                </li>
+                <li>
+                  Sessões 1:1 regulares com membros do time para identificar
+                  obstáculos
+                </li>
+                <li>
+                  Coaching para líderes técnicos na transição para um modelo de
+                  liderança servidora
+                </li>
+              </ul>
+            </ul>
+          </div>
+          <div class="education-item">
+            <h3 class="education-degree">Resultados:</h3>
+            <p>
+              A implementação da estratégia resultou em melhorias mensuráveis em
+              diversas áreas:
+            </p>
+            <ul>
+              <li><strong>Qualidade e Eficiência:</strong></li>
+              <ul>
+                <li>Redução de 40% em chamados de bugs em apenas 6 meses</li>
+                <li>
+                  Diminuição do ciclo de entrega de valor de 1 mês para 2
+                  semanas
+                </li>
+                <li>
+                  Otimização de performance em sistemas críticos através de
+                  refatoração estratégica (80% de melhoria)
+                </li>
+              </ul>
+              <li><strong>Cultura e Pessoas:</strong></li>
+              <ul>
+                <li>
+                  Aumento de 60% na produtividade dos times através da
+                  implementação de práticas ágeis
+                </li>
+                <li>
+                  Melhoria significativa na satisfação dos colaboradores
+                  (evidenciada por pesquisas internas)
+                </li>
+                <li>
+                  Criação de uma cultura de aprendizado contínuo e
+                  experimentação
+                </li>
+              </ul>
+              <li><strong>Escala Organizacional:</strong></li>
+              <ul>
+                <li>
+                  Expansão bem-sucedida do modelo ágil para 4 departamentos: TI,
+                  RH, Comercial e Marketing
+                </li>
+                <li>
+                  Desenvolvimento de multiplicadores internos para sustentar a
+                  transformação
+                </li>
+                <li>
+                  Adoção de um modelo de governança ágil alinhado com a
+                  estratégia de negócio
+                </li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Habilidades -->
     <section id="skills" class="section">
       <div class="container">
@@ -271,7 +491,7 @@
       </div>
     </section>
 
-    <!-- Educação -->
+    <!-- Formação Acadêmica -->
     <section id="education" class="section" style="background-color: white">
       <div class="container">
         <h2 class="section-title">Formação Acadêmica</h2>
@@ -288,10 +508,15 @@
             <h3 class="education-degree">Sistemas de Informação</h3>
             <div class="education-institution">Uniritter</div>
             <p class="education-description">
-              Durante a faculdade, fundei um grupo de estudos sobre IoT
-              (Internet of Things) e, como resultado, fui convidado por um
-              professor para ministrar palestras sobre Arduino para os alunos
-              dos cursos de tecnologia.
+              Durante a graduação, fundei e liderei um grupo de estudos pioneiro
+              em IoT (Internet of Things), que se tornou referência na
+              instituição. Este trabalho foi reconhecido pelo corpo docente,
+              resultando em convites para ministrar palestras sobre Arduino para
+              alunos de diversos cursos na área de tecnologia, estabelecendo as
+              bases para o projeto
+              <a href="https://tcheduino.blogspot.com" target="_blank"
+                >TcheDuino</a
+              >.
             </p>
           </div>
           <div class="education-item">
@@ -303,80 +528,146 @@
       </div>
     </section>
 
+    <!-- Reconhecimentos -->
+    <section id="recognition" class="section">
+      <div class="container">
+        <h2 class="section-title">Reconhecimentos</h2>
+        <div class="card">
+          <h3 class="card-title-small">LinkedIn Community Top Voices 2024</h3>
+          <div class="card-issuer">
+            Reconhecido como Top Voice da comunidade do LinkedIn em Liderança e
+            Desenvolvimento de Software, destacando-me através de contribuições
+            relevantes e conteúdo de valor para profissionais da área.
+          </div>
+          <a
+            href="https://www.linkedin.com/posts/marcusvbcosta_gratidaeto-linkedintopvoice-comunidade-activity-7154139086704803840-uAA6?utm_source=share&utm_medium=member_desktop&rcm=ACoAACElFDMBtAKqAPHN_8nPF_hs4RKBGPR8uJI"
+            target="_blank"
+            class="publication-link"
+          >
+            <i class="fas fa-external-link-alt"></i> Acessar Publicação
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Certificações -->
-    <section id="certifications" class="section">
+    <section
+      id="certifications"
+      class="section"
+      style="background-color: white"
+    >
       <div class="container">
         <h2 class="section-title">Certificações</h2>
-        <div class="certifications-grid">
-          <div class="certification-item">
-            <h3 class="certification-title">Cybersecurity Essentials</h3>
-            <div class="certification-issuer">The Linux Foundation</div>
-            <div class="certification-date">Janeiro 2024</div>
+        <div class="cards-grid">
+          <div class="card">
+            <h3 class="card-title-small">Cybersecurity Essentials</h3>
+            <div class="card-issuer">The Linux Foundation</div>
+            <div class="card-date">Janeiro 2024</div>
           </div>
-          <div class="certification-item">
-            <h3 class="certification-title">Métricas de negócios digitais</h3>
-            <div class="certification-issuer">PM3</div>
-            <div class="certification-date">Janeiro 2024</div>
+          <div class="card">
+            <h3 class="card-title-small">Métricas de negócios digitais</h3>
+            <div class="card-issuer">PM3</div>
+            <div class="card-date">Janeiro 2024</div>
           </div>
-          <div class="certification-item">
-            <h3 class="certification-title">
-              Enterprise Agile Coach Certified
-            </h3>
-            <div class="certification-issuer">AIB Institute</div>
-            <div class="certification-date">Agosto 2023</div>
+          <div class="card">
+            <h3 class="card-title-small">Enterprise Agile Coach Certified</h3>
+            <div class="card-issuer">AIB Institute</div>
+            <div class="card-date">Agosto 2023</div>
           </div>
-          <div class="certification-item">
-            <h3 class="certification-title">Accredited in OKR Management</h3>
-            <div class="certification-issuer">AIB Institute</div>
-            <div class="certification-date">Junho 2023</div>
+          <div class="card">
+            <h3 class="card-title-small">Accredited in OKR Management</h3>
+            <div class="card-issuer">AIB Institute</div>
+            <div class="card-date">Junho 2023</div>
           </div>
-          <div class="certification-item">
-            <h3 class="certification-title">
-              Customer Experience Professional
-            </h3>
-            <div class="certification-issuer">Kanban University</div>
-            <div class="certification-date">Maio 2022</div>
+          <div class="card">
+            <h3 class="card-title-small">Customer Experience Professional</h3>
+            <div class="card-issuer">Kanban University</div>
+            <div class="card-date">Maio 2022</div>
           </div>
-          <div class="certification-item">
-            <h3 class="certification-title">
-              Kanban System Design (KSD / KMP1)
-            </h3>
-            <div class="certification-issuer">Kanban University</div>
-            <div class="certification-date">Março 2022</div>
+          <div class="card">
+            <h3 class="card-title-small">Kanban System Design (KSD / KMP1)</h3>
+            <div class="card-issuer">Kanban University</div>
+            <div class="card-date">Março 2022</div>
           </div>
-          <div class="certification-item">
-            <h3 class="certification-title">
+          <div class="card">
+            <h3 class="card-title-small">
               Certified Lean Inception Facilitator
             </h3>
-            <div class="certification-issuer">Caroli.org</div>
-            <div class="certification-date">Novembro 2018</div>
+            <div class="card-issuer">Caroli.org</div>
+            <div class="card-date">Novembro 2018</div>
+          </div>
+          <div class="card">
+            <h3 class="card-title-small">Gestão da Inovação</h3>
+            <div class="card-issuer">Veduca</div>
+            <div class="card-date">Fevereiro 2025</div>
+          </div>
+          <div class="card">
+            <h3 class="card-title-small">AWS Cloud Practitioner Essentials</h3>
+            <div class="card-issuer">Amazon Web Services (AWS)</div>
+            <div class="card-date">Junho 2020</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Publicações -->
-    <section id="publications" class="section" style="background-color: white">
+    <section id="publications" class="section">
       <div class="container">
         <h2 class="section-title">Publicações</h2>
-        <div class="publications-grid">
-          <div class="publication-item">
-            <h3 class="publication-title">Primeiros Passos com Arduino</h3>
-            <p class="publication-date">2011</p>
+        <div class="cards-grid">
+          <div class="card">
+            <h3 class="card-title-small">A Chave do Aprendizado</h3>
+            <p class="card-date">2025</p>
+            <p>
+              Após meses estudando técnicas de aprendizado e aplicando na
+              prática, desenvolvi o e-Book "A Chave do Aprendizado" que é um
+              guia que reúne os métodos mais poderosos e cientificamente
+              comprovados para transformar a forma como você estuda e retém
+              conhecimento.
+            </p>
             <div class="publication-links">
               <a
-                href="https://pt.slideshare.net/slideshow/arduino-8002513/8002513"
+                href="/assets/pdf/Chave do Aprendizado.pdf"
                 target="_blank"
                 class="publication-link"
+                download
               >
-                <i class="fas fa-external-link-alt"></i> Acessar Slides
+                <i class="fas fa-file-pdf"></i> Baixar E-book
               </a>
             </div>
           </div>
 
-          <div class="publication-item">
-            <h3 class="publication-title">OKRs</h3>
-            <p class="publication-date">2020</p>
+          <div class="card">
+            <h3 class="card-title-small">A Trivialidade da Excelência</h3>
+            <p class="card-date">2023</p>
+            <p>
+              Artigo que desmistifica a excelência, mostrando que ela não é um
+              talento inato, mas sim o resultado de hábitos consistentes e
+              esforço contínuo. Inspirado em estudos sobre atletas de alto
+              rendimento, o texto destaca a importância da disciplina e da
+              repetição na busca pelo sucesso.
+            </p>
+            <div class="publication-links">
+              <a
+                href="https://www.linkedin.com/pulse/trivialidade-da-excel%C3%AAncia-marcus-costa"
+                target="_blank"
+                class="publication-link"
+              >
+                <i class="fas fa-external-link-alt"></i> Acessar Artigo
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title-small">OKRs</h3>
+            <p class="card-date">2020</p>
+            <p>
+              Slides sobre a metodologia OKR (Objectives and Key Results),
+              abordando desde a sua história até exemplos práticos de aplicação.
+              A apresentação explica como definir objetivos ambiciosos e
+              resultados chave mensuráveis para impulsionar o crescimento e o
+              foco em times e organizações.
+            </p>
             <div class="publication-links">
               <a
                 href="https://pt.slideshare.net/MarcusViniciusBrumda/okrs-238968629"
@@ -388,10 +679,53 @@
             </div>
           </div>
 
-          <div class="publication-item">
-            <h3 class="publication-title">Tcheduino</h3>
-            <p class="publication-date">2011</p>
-            <p class="publication-date">
+          <div class="card">
+            <h3 class="card-title-small">
+              Golden Circle: Por que fazemos o que fazemos?
+            </h3>
+            <p class="card-date">2020</p>
+            <p>
+              Artigo que explora o conceito do Golden Circle de Simon Sinek,
+              explicando como as organizações podem inspirar e engajar pessoas
+              comunicando seu propósito (o "porquê"), seus processos (o "como")
+              e seus produtos (o "o que"). O material demonstra como a clareza
+              do propósito pode gerar lealdade e conexão com o público.
+            </p>
+            <div class="publication-links">
+              <a
+                href="https://www.linkedin.com/pulse/golden-circle-por-que-fazemos-o-marcus-costa"
+                target="_blank"
+                class="publication-link"
+              >
+                <i class="fas fa-external-link-alt"></i> Acessar Artigo
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title-small">Primeiros Passos com Arduino</h3>
+            <p class="card-date">2011</p>
+            <p>
+              Apresentação introdutória sobre a plataforma Arduino, explorando
+              seus componentes de hardware e software. Ideal para iniciantes em
+              eletrônica e programação, o material demonstra como criar projetos
+              interativos utilizando sensores e atuadores.
+            </p>
+            <div class="publication-links">
+              <a
+                href="https://pt.slideshare.net/slideshow/arduino-8002513/8002513"
+                target="_blank"
+                class="publication-link"
+              >
+                <i class="fas fa-external-link-alt"></i> Acessar Slides
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title-small">Tcheduino</h3>
+            <p class="card-date">2011</p>
+            <p>
               Fundador do blog e grupo de estudos focado em Internet das Coisas
               (IoT), robótica e automação com Arduino. O projeto nasceu durante
               minha formação acadêmica e se transformou em uma plataforma de
@@ -407,49 +741,136 @@
               </a>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="publication-item">
-            <h3 class="publication-title">A Trivialidade da Excelência</h3>
-            <p class="publication-date">2023</p>
-            <div class="publication-links">
-              <a
-                href="https://www.linkedin.com/pulse/trivialidade-da-excel%C3%AAncia-marcus-costa"
-                target="_blank"
-                class="publication-link"
-              >
-                <i class="fas fa-external-link-alt"></i> Acessar Artigo
-              </a>
-            </div>
-          </div>
-
-          <div class="publication-item">
-            <h3 class="publication-title">
-              Golden Circle: Por que fazemos o que fazemos?
+    <!-- Palestras e Workshops -->
+    <section id="workshops" class="section" style="background-color: white">
+      <div class="container">
+        <h2 class="section-title">Palestras e Workshops</h2>
+        <div class="education-list">
+          <div class="education-item">
+            <h3 class="education-degree">
+              Introdução à Agilidade: Princípios e Práticas
             </h3>
-            <p class="publication-date">2020</p>
-            <div class="publication-links">
-              <a
-                href="https://www.linkedin.com/pulse/golden-circle-por-que-fazemos-o-marcus-costa"
-                target="_blank"
-                class="publication-link"
+            <p>
+              Palestra sobre os fundamentos da mentalidade ágil e suas
+              aplicações práticas em diferentes contextos. Baseado em minhas
+              experiências implementando transformações ágeis em múltiplos
+              departamentos.
+            </p>
+          </div>
+          <div class="education-item">
+            <h3 class="education-degree">
+              Kanban na Prática: Otimizando o Fluxo de Trabalho
+            </h3>
+            <p>
+              Workshop prático sobre implementação do Kanban para visualização e
+              otimização de fluxos de trabalho em times de diversos setores.
+            </p>
+          </div>
+          <div class="education-item">
+            <h3 class="education-degree">OKRs: Da Teoria à Prática</h3>
+            <p>
+              Palestra sobre implementação eficaz de Objectives & Key Results
+              alinhados com metodologias ágeis.
+            </p>
+          </div>
+          <div class="education-item">
+            <h3 class="education-degree">IoT e Arduino: Inovação Acessível</h3>
+            <p>
+              Introdução ao universo da Internet das Coisas utilizando Arduino,
+              baseada na minha experiência com o projeto
+              <a href="https://tcheduino.blogspot.com" target="_blank"
+                >TcheDuino</a
               >
-                <i class="fas fa-external-link-alt"></i> Acessar Artigo
-              </a>
+              e palestras acadêmicas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="testimonials" class="section">
+      <div class="container">
+        <h2 class="section-title">Depoimentos</h2>
+        <div class="cards-grid">
+          <div class="card" style="text-align: left">
+            <p style="font-style: italic">
+              "Marcus é muito engajado e comprometido com seu time. Sempre está
+              disposto a dar seu melhor com empatia e liderança inspiradora. Tem
+              uma sólida experiência na área de TI e gestão de projetos. "
+            </p>
+            <div class="testimonial-author">
+              <div>
+                <h4>Ane Caroline Araujo</h4>
+                <a
+                  href="https://www.linkedin.com/in/anecarolinearaujo777/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin" style="font-size: 32px"></i
+                ></a>
+              </div>
             </div>
           </div>
 
-          <div class="publication-item">
-            <h3 class="publication-title">A Chave do Aprendizado</h3>
-            <p class="publication-date">2025</p>
-            <div class="publication-links">
-              <a
-                href="/assets/pdf/Chave do Aprendizado.pdf"
-                target="_blank"
-                class="publication-link"
-                download
-              >
-                <i class="fas fa-file-pdf"></i> Baixar Ebook
-              </a>
+          <div class="card" style="text-align: left">
+            <p style="font-style: italic">
+              "O Marcus domina a área da tecnologia e tem um perfil de
+              liderança. Tem empatia e ambição para alcançar grandes objetivos
+              na equipe e motiva os outros a serem assim também. Seu jeito faz
+              com que trabalhar em equipe seja algo natural. Temos muito mais
+              para conquistar juntos como empresa, e também como amigos."
+            </p>
+            <div class="testimonial-author">
+              <div>
+                <h4>Fabio Quinto Marsiaj</h4>
+                <a
+                  href="https://www.linkedin.com/in/fabiomarsiaj/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin" style="font-size: 32px"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="text-align: left">
+            <p style="font-style: italic">
+              "O Marcus foi e tem sido uma grata surpresa à todos nós. É um
+              profissional dedicado, de mentalidade e atitude empreendedora, com
+              perfil de liderança. Com certeza ainda conquistaremos excelentes
+              resultados juntos!"
+            </p>
+            <div class="testimonial-author">
+              <div>
+                <h4>Gabriel Iung Machado</h4>
+                <a
+                  href="https://www.linkedin.com/in/gabrieliungmachado/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin" style="font-size: 32px"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="text-align: left">
+            <p style="font-style: italic">
+              "O Marcus é um profissional experiente na área de tecnologia em
+              geral: web, móvel, e até eletrônica, além da interação entre os
+              mesmos, o que ele não sabe, ele vai atrás, e é um excelente e
+              ativo teamplayer para qualquer equipe. Posso descrevê-lo como um
+              cientista, sempre experimentando quando tem a oportunidade."
+            </p>
+            <div class="testimonial-author">
+              <div>
+                <h4>Maiko Gabriel Kinzel Engelke</h4>
+                <a
+                  href="https://www.linkedin.com/in/maiko-gabriel-kinzel-engelke/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin" style="font-size: 32px"></i
+                ></a>
+              </div>
             </div>
           </div>
         </div>
@@ -505,7 +926,44 @@
             ></textarea>
           </div>
           <button type="submit" class="btn">Enviar Mensagem</button>
+          <p class="privacy-note">
+            Seus dados serão utilizados apenas para responder ao seu contato e
+            não serão compartilhados com terceiros.
+          </p>
         </form>
+      </div>
+    </section>
+
+    <!-- Botões CTA -->
+    <section id="cta" class="section" style="padding: 0">
+      <div class="container">
+        <div class="cta-container">
+          <a
+            href="mailto:marcusviniciusbrumcosta@gmail.com"
+            class="cta-button secondary"
+            target="_blank"
+            ><i class="fas fa-envelope" style="margin-right: 15px"></i>Enviar
+            e-mail</a
+          >
+          <a
+            href="tel:+5551993586022"
+            class="cta-button secondary"
+            target="_blank"
+            ><i class="fas fa-phone" style="margin-right: 15px"></i>Falar
+            Diretamente: (51) 99358-6022</a
+          >
+          <a
+            href="https://wa.me/5551993586022"
+            class="cta-button secondary"
+            target="_blank"
+            ><i class="fab fa-whatsapp" style="margin-right: 15px"></i>Falar por
+            WhatsApp</a
+          >
+          <a href="#" class="cta-button primary" id="back-to-top"
+            ><i class="fa-solid fa-arrow-up" style="margin-right: 15px"></i
+            >Voltar ao Topo</a
+          >
+        </div>
       </div>
     </section>
 
@@ -520,14 +978,6 @@
           </p>
           <p><i class="fas fa-phone"></i> (51) 99358-6022</p>
           <p><i class="fab fa-linkedin"></i> /marcusvbcosta</p>
-        </div>
-        <div class="footer-links">
-          <a href="#about">Sobre</a>
-          <a href="#experience">Experiência</a>
-          <a href="#skills">Habilidades</a>
-          <a href="#education">Educação</a>
-          <a href="#certifications">Certificações</a>
-          <a href="#publications">Publicações</a>
         </div>
         <p>
           &copy; 2025 Marcus Vinicius Brum da Costa. Todos os direitos
